@@ -1,13 +1,60 @@
 is_package: true
 container:
   type: HtmlTemplate
-  properties: {html: '@theme:standard-page.html'}
+  properties: {html: '@theme:standard-page.html', role: headline}
 components:
 - type: ColumnPanel
   properties: {col_widths: '{}'}
   name: content_panel
   layout_properties: {slot: default}
-  components: []
+  components:
+  - name: outlined_card_1
+    properties: {role: outlined-card}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'XEWPCM,ERIWFC'}
+    components:
+    - name: label_1
+      properties: {text: Your Feedback Is Important For Us, icon_align: top, align: center,
+        bold: true, italic: true, foreground: 'theme:Primary'}
+      type: Label
+      layout_properties: {grid_position: 'ENGGKO,RYOAVU', row_background: '#15c4c6'}
+  - name: Name
+    properties: {text: 'Name:'}
+    type: Label
+    layout_properties: {grid_position: 'OSEMKS,BXPAAJ', row_background: '', full_width_row: false}
+  - name: name_box
+    properties: {placeholder: Enter your Name}
+    type: TextBox
+    layout_properties: {grid_position: 'JHHBFT,SLGOAH'}
+  - name: Email
+    properties: {text: 'Email_id:'}
+    type: Label
+    layout_properties: {grid_position: 'WQZVJZ,PTHMKL'}
+  - name: email_box
+    properties: {placeholder: Enter your email_id}
+    type: TextBox
+    layout_properties: {grid_position: 'ZXSENQ,BAQBOZ'}
+  - name: contact_no
+    properties: {text: Contact_no(optional)}
+    type: Label
+    layout_properties: {grid_position: 'YHVWQB,LSGEAX'}
+  - name: contact_box
+    properties: {placeholder: Enter your Phone number}
+    type: TextBox
+    layout_properties: {grid_position: 'JONPXH,CEKPBT'}
+  - name: feed_box
+    properties: {text: Feed back}
+    type: Label
+    layout_properties: {grid_position: 'XLXQKM,MJBHQX'}
+  - name: text_area_1
+    properties: {}
+    type: TextArea
+    layout_properties: {grid_position: 'QLGRHA,LECUBH'}
+  - name: comment
+    properties: {text: Submit, role: outlined-button}
+    type: Button
+    layout_properties: {grid_position: 'SSAISF,ATRPWD'}
+    event_bindings: {click: comment_click}
 - type: FlowPanel
   properties: {}
   name: navbar_links

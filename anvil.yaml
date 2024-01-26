@@ -1,9 +1,31 @@
+dependencies: []
+services:
+- source: /runtime/services/tables.yml
+  client_config: {}
+  server_config: {}
+package_name: Feed_back_form
 allow_embedding: false
-package_name: M3_App_3
-name: M3 App 3
-startup_form: Form1
-renamed: true
+name: Feed back form
 runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox,
   server_spec: null}
-dependencies: []
-services: []
+metadata: {title: Feed back form, description: It is a simple feed back form in python}
+startup_form: Form1
+db_schema:
+  feedback:
+    client: none
+    server: full
+    columns:
+    - name: Name
+      admin_ui: {width: 200, order: 0}
+      type: string
+    - name: Email_id
+      admin_ui: {width: 200, order: 1}
+      type: string
+    - name: contact_no
+      admin_ui: {width: 200, order: 2}
+      type: number
+    - name: feedback
+      admin_ui: {width: 200, order: 3}
+      type: string
+    title: Feedback
+renamed: true
