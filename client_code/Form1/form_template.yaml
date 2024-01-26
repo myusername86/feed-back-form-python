@@ -18,15 +18,15 @@ components:
         bold: true, italic: true, foreground: 'theme:Primary'}
       type: Label
       layout_properties: {grid_position: 'ENGGKO,RYOAVU', row_background: '#15c4c6'}
-  - name: Name
+  - name: Name_box
     properties: {text: 'Name:'}
     type: Label
     layout_properties: {grid_position: 'OSEMKS,BXPAAJ', row_background: '', full_width_row: false}
-  - name: name_box
+  - name: name
     properties: {placeholder: Enter your Name}
     type: TextBox
     layout_properties: {grid_position: 'JHHBFT,SLGOAH'}
-  - name: Email
+  - name: Email_box
     properties: {text: 'Email_id:'}
     type: Label
     layout_properties: {grid_position: 'WQZVJZ,PTHMKL'}
@@ -34,11 +34,11 @@ components:
     properties: {placeholder: Enter your email_id}
     type: TextBox
     layout_properties: {grid_position: 'ZXSENQ,BAQBOZ'}
-  - name: contact_no
+  - name: contact
     properties: {text: Contact_no(optional)}
     type: Label
     layout_properties: {grid_position: 'YHVWQB,LSGEAX'}
-  - name: contact_box
+  - name: contact_no
     properties: {placeholder: Enter your Phone number}
     type: TextBox
     layout_properties: {grid_position: 'PJLCYW,JUAFCA'}
