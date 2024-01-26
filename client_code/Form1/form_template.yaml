@@ -34,14 +34,14 @@ components:
     properties: {placeholder: Enter your email_id}
     type: TextBox
     layout_properties: {grid_position: 'ZXSENQ,BAQBOZ'}
-  - name: contact
+  - name: contact_box
     properties: {text: Contact_no(optional)}
     type: Label
     layout_properties: {grid_position: 'YHVWQB,LSGEAX'}
   - name: contact_no
     properties: {placeholder: Enter your Phone number}
     type: TextBox
-    layout_properties: {grid_position: 'PJLCYW,JUAFCA'}
+    layout_properties: {grid_position: 'QYJRWI,NPZQZC'}
   - name: feed_box
     properties: {text: Feed back}
     type: Label

@@ -1,3 +1,4 @@
+import anvil.email
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
@@ -24,5 +25,13 @@ def add_feedback(name,email,contact_no,feedback):
     contact_no=contact_no,
     feedback=feedback,
     created=datetime.now()
+  )
+  anvil.email.send(subject=f"Feedback form {name}",text=f"""
+  A new person filled out the feedback form!
+  Name: {name}
+  Email address :{email}
+  contact no:{contact}
+  feedback:{feedback}
+  """
   )
   
