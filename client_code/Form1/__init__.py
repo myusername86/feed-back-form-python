@@ -16,6 +16,8 @@ class Form1(Form1Template):
     """Display a pop up to say you clicked the button"""
     alert("You clicked the button")
     
+  
+
   def submit_button_click(self,**event_args):
     #set name to the text in the "name_box"
     name=self.name_box.text
@@ -24,5 +26,21 @@ class Form1(Form1Template):
     #set contact_no to the text in the "contact_box"
     contact_no=self.contact_box.text
     #set feedback to the text in the "feedback_box"
-    feed_box=self.feed_box.text
+    feedback=self.feed_box.text
+    anvil.server.call('add_feedback',name,email,contact_no,feedback)
+    Notification("Feedback submitted").show()
+    self.clear_input()
+
+  def clear_inputs(self):
+    self.name_box.text=" "
+    self.email_box.text=" "
+    self.contact_no.text=" "
+    self.feed_box.text=" "
+
+
+
+
+ 
+
+  
     
